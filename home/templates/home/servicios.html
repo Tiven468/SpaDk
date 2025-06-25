@@ -1,0 +1,117 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block title %}Servicios - Spa Verónica Hernández{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/servicios.css' %}">
+{% endblock %}
+
+{% block content %}
+    
+<div class="container">
+    <section class="d-flex align-items-center mb-3">
+    <div>
+        <h2> <br>Servicios</h2>
+        <p>Aquí podrás ver los diferentes servicios que te <br> ofrecemos</p>
+    </div>
+    <div class="ms-auto d-flex align-items-center">
+        <img src="{% static 'home/images/logoFooter.png' %}" alt="Decorativo" style="width: 36px; height: 36px; margin-right: 8px;">
+        <span style="color: #C79E42; font-weight: bold;">¡Reserva tu cita hoy!</span>
+    </div>
+    </section>
+    
+    <section>
+        <div class="d-flex justify-content-center">
+        <div class="d-flex gap-3 flex-wrap mt-5">
+        <div class="card carta">
+            <img src="{% static 'home/images/facial.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Limpieza fácial</h5>
+                <p>100.000$ COP</p>
+                <p class="card-text">Eliminamos impurezas, células muertas y exceso de grasa de tu piel.</p><br>
+                <a href="#" class="btn botonReservaServicio">Reserva ahora</a>
+            </div>
+          </div>
+
+        <div class="d-flex gap-3 flex-wrap">
+        <div class="card carta">
+            <img src="{% static 'home/images/mansaje2.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Masaje relajante</h5>
+                <p>60.000$ COP</p> 
+                <p class="card-text">Utilizamos movimientos suaves para alivianar la tensión y promover la relajación de tu cuerpo.</p><br>
+                <a href="#" class="btn botonReservaServicio">Reserva ahora</a>
+            </div>
+        </div>
+
+        <div class="d-flex gap-3 flex-wrap">
+        <div class="card carta2">
+            <img src="{% static 'home/images/Masaje.jpg' %}" class="card-img-top descontracturanteFoto" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Masaje descontracturante</h5>
+                <p>60.000$ COP</p> 
+                <p class="card-text">Relaja la musculatura y disuelve las contracturas que se producen por el estrés, malas postura o un mal descanso.</p>
+                <a href="#" class="btn botonReservaServicio">Reserva ahora</a>
+            </div>
+        </div>
+    </section> 
+
+    <section>
+    <div class="d-flex justify-content-center">
+    
+        <div class="d-flex gap-3 flex-wrap">
+        <div class="card carta3">
+            <img src="{% static 'home/images/pierna.jpg' %}" class="card-img-top deportivoFoto" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Masaje deportivo</h5>
+                <p>60.000 COP</p> 
+                <p class="card-text">Activamos tus músculos para mejorar la circulación y devolverte la energía.</p><br><br>
+                <a href="#" class="btn botonReservaServicio">Reserva ahora</a>
+            </div>
+        </div>
+
+        <div class="d-flex gap-3 flex-wrap">
+        <div class="card carta3">
+            <img src="{% static 'home/images/Inyeccion.jpg' %}" class="card-img-top plasmaFoto" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Plasma rico en plaquetas</h5>
+                <p>180.000 COP</p> 
+                <p class="card-text">Utilizamos una técnica natural que regenera, reafirma y devuelve luminosidad usando tus propias células.</p><br>
+                <a href="#" class="btn botonReservaServicio">Reserva ahora</a>
+            </div>
+        </div>
+
+        <div class="d-flex gap-3 flex-wrap">
+        <div class="card carta3">
+            <img src="{% static 'home/images/Rodillo.jpg' %}" class="card-img-top reductorFoto" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Masaje reductor</h5>
+                <p>500.000 COP (10 sesiones)</p> 
+                <p class="card-text">Nos enfocamos en eliminar grasa localizada y moldear la figura a través de movimientos intensos y firmes.</p><br>
+                <a href="#" class="btn botonReservaServicio">Reserva ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="d-flex gap-3 flex-wrap">
+        <div class="card cartaCau">
+            <img src="{% static 'home/images/cauterizacion.jpg' %}" class="card-img-top cauterizacionFoto" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cauterización (Verrugas, lunares, milliuns)</h5>
+                <p class="precios" style="margin-bottom: 9px;">Pequeño: 10.000$ COP<br>Mediano: 20.000$ COP<br>Grande: 30.000$ COP</p>
+                <p class="card-text">Utilizamos calor, corriente eléctrica o sustancias químicas para destruir tejido o eliminar irregulaciones no deseadas</p>
+                <a href="#" class="btn botonReservaServicio" >Reserva ahora</a>
+            </div>
+        </div>
+    </section>
+
+</div>
+<div>
+    
+</div>
+
+
+{% endblock %}

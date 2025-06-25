@@ -1,0 +1,55 @@
+{% extends 'usuarios/base.html' %}
+<!-- load static debe estar en todos los htmls que usen base.html -->
+{% load static %}
+<!-- block title es el titulo que tendra la pestaña de dicho html -->
+{% block title %}Spa VH - Usuarios{% endblock %}
+
+<!-- Aqui ponemos el archivo css de cada html -->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'usuarios/css/crudusuarios.css' %}">
+{% endblock %}
+
+<!-- Aqui ponemos el contenido especifico del archivo html -->
+{% block content %}
+
+<div class="contanedor-general">
+    <div class="crud-title">
+        <h1>Usuarios registrados</h1>
+    </div>
+        <table class="table">
+        <thead> 
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Tipo documento</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Contraseña</th>
+                <th scope="col">Celular</th>
+                <th scope="col">Fecha nacimiento</th>
+                <th scope="col">Perfil</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr> 
+                <td>{{ usuario.idusuarios }}</td>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.apellidos }}</td>
+                <td>{{ usuario.tipodocumento }}</td>
+                <td>{{ usuario.numerodocumento }}</td>
+                <td>{{ usuario.correo }}</td>
+                <td>{{ usuario.contraseña }}</td>
+                <td>{{ usuario.celular }}</td>
+                <td>{{ usuario.fechanacimiento }}</td>
+                <td>{{ usuario.perfiles_idperfiles}}</td>
+                <td><Button>Hola</Button> <button>Hola2</button></td>
+            </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+.carta{
+    width: 18rem; 
+    margin-bottom: 3%;
+    height: 94%;
+}
+
+.botonReservaServicio{
+    background-color: #fec2c2;
+}
+
+.carta2{
+    width: 18rem; 
+    height: 94%;
+    margin-bottom: 4%;
+}
+
+.carta3{
+    width: 18rem;
+    height: 81%;
+}
+
+.descontracturanteFoto{
+    height: 41.5%;
+}
+
+.deportivoFoto{
+    height: 39%;
+}
+
+.plasmaFoto{
+    height: 39%;
+}
+
+.reductorFoto{
+    height: 39%;
+}
+
+.cauterizacionFoto{
+    height: 39%;
+}
+.cartaCau{
+    width: 18rem;
+    height: 89%;
+    margin-left: 10%;
+    margin-top: -75px;
+}
+
