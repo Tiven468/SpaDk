@@ -1,20 +1,21 @@
-# Dockerfile para proyecto Django
 FROM python:3.11-slim
 
-# Establece el directorio de trabajo
+# Set the working directory
 WORKDIR /app
 
-# Copia los archivos de requerimientos
-COPY requirements.txt requirements.txt
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    default-libmysqlclient-dev \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
 
-# Instala las dependencias
+# Copy and install Python dependencies
+COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia el resto del código del proyecto
+# Copy your application files
 COPY . .
 
-# Expone el puerto 8000 para Django
-EXPOSE 8000
-
-# Comando por defecto para correr el servidor de desarrollo
-CMD ["python", "spavh/manage.py", "runserver", "0.0.0.0:8000"]
+# Command to run your app (adjust if needed)
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
